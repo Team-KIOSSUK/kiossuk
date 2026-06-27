@@ -1,0 +1,40 @@
+/* 홈 화면 버튼 컨테이너 */
+.home-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 39px; /* Kiosk.css의 left: 39px와 맞춤 */
+  box-sizing: border-box;
+}
+
+/* 홈 화면 버튼 초기 위치 및 애니메이션 설정 */
+.home-menu-card {
+  transform: translateY(100vh); /* 초기 위치: 화면 아래 */
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.8s;
+  left: 39px; /* Kiosk.css와 동일하게 설정 */
+}
+
+/* 애니메이션 시작 시 최종 위치 */
+.home-menu-container.animated .home-menu-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 홈 화면 버튼의 아이콘과 텍스트 크기 조정 */
+.home-menu-card .menu-icon {
+  font-size: 36px;
+}
+
+.home-menu-card .menu-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* 홈 화면 버튼 호버 효과 (애니메이션 완료 후 적용) */
+.home-menu-container.animated .home-menu-card:hover {
+  transform: scale(1.02);
+}
