@@ -6,6 +6,7 @@ import Kiosk from './pages/Kiosk/kiosk_home';
 import BrainTraining from './pages/Games/BrainTraining';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
+import MoleGame from './pages/Games/MoleGame';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/home1" element={<Home1 />} />
       <Route path="/kiosk" element={<Kiosk />} />
       <Route path="/brain-training" element={<BrainTraining />} />
+      <Route path="/brain-training/mole" element={<MoleGame />} />
       <Route path="/records" element={<Records />} />
       <Route path="/support" element={<Support />} />
     </Routes>
