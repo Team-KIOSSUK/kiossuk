@@ -7,6 +7,8 @@ import BrainTraining from './pages/Games/BrainTraining';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
 
+import BankMain from './pages/Kiosk/Bank/BankMain';
+
 function App() {
   return (
     <Routes>
@@ -17,8 +19,11 @@ function App() {
       <Route path="/brain-training" element={<BrainTraining />} />
       <Route path="/records" element={<Records />} />
       <Route path="/support" element={<Support />} />
+
+      <Route path="/kiosk/bank" element={<BankMain />} />
     </Routes>
   );
 }
+
 
 export default App;

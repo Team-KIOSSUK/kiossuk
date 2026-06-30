@@ -1,0 +1,141 @@
+/* 전체 컨테이너 설정 (모바일 사이즈 412x917 고정) */
+.bank-main-container {
+  width: 412px;
+  height: 917px;
+  margin: 0 auto; /* 브라우저 중앙 정렬 */
+  padding: 30px 20px;
+  box-sizing: border-box; /* 패딩 포함해서 412px 유지 */
+  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  background-color: #f4f7f6;
+  overflow-y: auto; /* 내용이 넘치면 스크롤되도록 설정 */
+  position: relative;
+}
+
+/* 헤더 스타일 */
+.bank-header {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 가운데 정렬 추가 */
+  width: 100%;
+}
+
+.bank-header h1 {
+  /* 글씨 크기를 1.8rem에서 1.5rem으로 줄이고, 여백을 조정했습니다. */
+  font-size: 1.5rem; 
+  color: #2c3e50;
+  margin-bottom: 10px;
+  line-height: 1.2; /* 줄간격 조정 */
+  word-break: keep-all; /* 단어 단위로 줄바꿈 (필요 시) */
+}
+
+.bank-header p {
+  font-size: 1rem;
+  color: #666;
+  word-break: keep-all;
+}
+
+/* 섹션 공통 스타일 */
+.bank-section {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 섹션 내부 제목도 가운데 정렬 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  /* 글씨 크기를 1.2rem에서 1.1rem으로 줄여서 한 줄에 들어가게 조정했습니다. */
+  font-size: 1.1rem; 
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #4CAF50;
+  padding-bottom: 8px;
+  display: inline-block;
+  white-space: nowrap; /* 글자가 무조건 한 줄에 나오도록 강제 설정 */
+}
+
+/* 모드 선택 버튼 그룹 (모바일에 맞춰 세로 배치) */
+.mode-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%; /* 버튼이 꽉 차게 */
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.mode-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.mode-text strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.mode-text span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* 활성화된 버튼 */
+.mode-btn.active {
+  border-color: #4CAF50;
+  background-color: #e8f5e9;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* 기능 선택 그리드 */
+.feature-btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.feature-btn {
+  padding: 20px 10px; /* 패딩 살짝 줄임 */
+  font-size: 1.1rem; /* 글자 크기 살짝 줄임 */
+  font-weight: bold;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  word-break: keep-all;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 기능 선택 버튼 호버(마우스 오버) 효과 */
+.feature-btn:hover {
+  background-color: #388E3C; /* 어두운 초록색으로 변경 */
+  transform: translateY(-2px); /* 살짝 위로 떠오르는 효과 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 진하게 */
+}
+
+/* 위에 있는 모드 선택 버튼(눈으로 보기 등) 호버 효과도 같이 추가해 둡니다 */
+.mode-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
