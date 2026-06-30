@@ -8,6 +8,8 @@ import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
 
 import BankMain from './pages/Kiosk/Bank/BankMain';
+import Withdrawal from './pages/Kiosk/Bank/features/withdrawal';
+import Transfer from './pages/Kiosk/Bank/features/transfer';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Route path="/support" element={<Support />} />
 
       <Route path="/kiosk/bank" element={<BankMain />} />
+      <Route path="/kiosk/bank/withdrawal" element={<Withdrawal />} />
+      <Route path="/kiosk/bank/transfer" element={<Transfer />} />
     </Routes>
   );
 }
