@@ -7,21 +7,25 @@ const menus = [
     icon: '☕',
     title: '카페 주문',
     desc: '메뉴와 옵션을 골라요',
+    path: null, // TODO: 카페 페이지 연결
   },
   {
     icon: '🍔',
     title: '음식점 주문',
     desc: '주문부터 결제까지 해봐요',
+    path: '/kiosk/restaurant',
   },
   {
     icon: '🏦',
     title: '은행 업무',
     desc: '입출금과 송금을 연습해요',
+    path: null, // TODO: 은행 페이지 연결
   },
   {
     icon: '🚆',
     title: '기차 예매',
     desc: '기차표를 예매해봐요',
+    path: null, // TODO: 기차 예매 페이지 연결
   },
 ];
 
@@ -76,6 +80,7 @@ export default function Kiosk() {
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
             }}
+            onClick={() => menu.path && navigate(menu.path)}
           >
             <div className="menu-icon">{menu.icon}</div>
 
