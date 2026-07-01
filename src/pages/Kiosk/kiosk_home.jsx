@@ -71,6 +71,9 @@ export default function Kiosk() {
           <button
             key={idx}
             className="menu-card"
+            onClick={() => {
+  if (menu.title === '카페 주문') navigate('/kiosk/cafe');
+}}
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
