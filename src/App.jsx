@@ -10,6 +10,8 @@ import Support from './pages/Support/Support';
 import BankMain from './pages/Kiosk/Bank/BankMain';
 import Withdrawal from './pages/Kiosk/Bank/features/withdrawal';
 import Transfer from './pages/Kiosk/Bank/features/transfer';
+import Inquiry from './pages/Kiosk/Bank/features/inquiry';
+import Passbook from './pages/Kiosk/Bank/features/passbook';
 
 function App() {
   return (
@@ -25,7 +27,12 @@ function App() {
       <Route path="/kiosk/bank" element={<BankMain />} />
       <Route path="/kiosk/bank/withdrawal" element={<Withdrawal />} />
       <Route path="/kiosk/bank/transfer" element={<Transfer />} />
+      <Route path="/kiosk/bank/inquiry" element={<Inquiry />} />
+      <Route path="/kiosk/bank/passbook" element={<Passbook />} />
+
+
     </Routes>
+    
   );
 }
 

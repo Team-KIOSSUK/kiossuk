@@ -16,5 +16,23 @@ export const tutorialData = {
         { id: 3, text: '입력하신 내용을 확인 후 확인 버튼을 누르세요.' },
         ]
   },
-  // 나중에 transfer, balance 등도 여기에 추가하면 됩니다.
+        inquiry: {
+        title: '예금 조회',
+        steps: [
+        { id: 1, text: '통장을 투입구에 넣어주세요.' },
+       { id: 2, text: '조회하실 계좌를 선택해 주세요.' },
+        { id: 3, text: '화면에서 잔액을 확인해 주세요.' },
+    ]
+  },
+
+        passbook: {
+        title: '통장 정리',
+        steps: [
+       { id: 1, text: '통장 투입구에 통장을 넣어주세요.' },
+        { id: 2, text: '통장 정리 버튼을 눌러주세요.' },
+        { id: 3, text: '정리가 완료될 때까지 기다려주세요.' },
+    ]
+  },
 };
+
+  
