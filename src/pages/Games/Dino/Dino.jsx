@@ -33,6 +33,8 @@ export default function Dino() {
     const handleKeyDown = (e) => {
       if (e.code !== 'Space') return;
 
+      e.preventDefault();
+
       if (gameState === 'ready' || gameState === 'over') {
         startGame();
       } else {
@@ -98,6 +100,14 @@ export default function Dino() {
 
   return (
     <div className="dino-page">
+
+        <button
+  className="back-btn"
+  onClick={() => window.history.back()}
+>
+  ← 이전
+</button>
+
       <h1>공룡 달리기</h1>
       <p>스페이스바로 점프해서 선인장을 피해요!</p>
 
