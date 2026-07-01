@@ -17,6 +17,7 @@ const menus = [
     icon: '🛒',
     title: '장보기',
     desc: '목록의 물건을 기억해요',
+    path: '/game/market',
   },
   {
     icon: '✌️',
@@ -98,7 +99,13 @@ export default function BrainTraining() {
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
             }}
-            onClick={() => handleGameClick(menu.title)}
+              onClick={() => {
+              handleGameClick(menu.title);
+              if (menu.path) {
+                navigate(menu.path);
+              }
+            }}
+
           >
             <div className="menu-icon">{menu.icon}</div>
             <div className="menu-text">

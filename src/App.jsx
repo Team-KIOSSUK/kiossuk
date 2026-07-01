@@ -13,6 +13,10 @@ import Transfer from './pages/Kiosk/Bank/features/transfer';
 import Inquiry from './pages/Kiosk/Bank/features/inquiry';
 import Passbook from './pages/Kiosk/Bank/features/passbook';
 
+
+import MarketGame from './pages/Games/Market/MarketGame';
+
+
 function App() {
   return (
     <Routes>
@@ -31,6 +35,9 @@ function App() {
       <Route path="/kiosk/bank/passbook" element={<Passbook />} />
 
 
+
+
+      <Route path="/game/market" element={<MarketGame />} />
     </Routes>
     
   );
