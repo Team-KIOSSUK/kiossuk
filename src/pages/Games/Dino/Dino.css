@@ -1,0 +1,149 @@
+.dino-page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 35px;
+  text-align: center;
+  background: linear-gradient(#fff7df, #ffdca8);
+  font-family: Arial, sans-serif;
+  color: #5c3b1e;
+}
+
+.dino-page h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.dino-page p {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.score {
+  width: 160px;
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 20px;
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dino-game {
+  position: relative;
+  width: 760px;
+  height: 330px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 4px solid #6b4b2a;
+  border-radius: 24px;
+  background: linear-gradient(#b9efff 0%, #eaffff 62%, #ffda91 62%);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.dino-character {
+  position: absolute;
+  left: 95px;
+  font-size: 46px;
+  z-index: 5;
+  transform: scaleX(-1);
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 55px;
+  font-size: 42px;
+  z-index: 4;
+}
+
+.ground {
+  position: absolute;
+  left: 0;
+  bottom: 53px;
+  width: 100%;
+  height: 5px;
+  background: #6b4b2a;
+  z-index: 3;
+}
+
+.sun {
+  position: absolute;
+  top: 30px;
+  right: 55px;
+  font-size: 38px;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 35px;
+  opacity: 0.85;
+}
+
+.cloud-a {
+  top: 65px;
+  left: 120px;
+  animation: cloudMoveA 8s linear infinite;
+}
+
+.cloud-b {
+  top: 105px;
+  left: 500px;
+  animation: cloudMoveB 11s linear infinite;
+}
+
+@keyframes cloudMoveA {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-220px);
+  }
+}
+
+@keyframes cloudMoveB {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-260px);
+  }
+}
+
+.message-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  padding: 25px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.message-box h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: #333;
+}
+
+.message-box p {
+  margin: 8px 0 16px;
+  font-weight: bold;
+}
+
+.message-box button {
+  border: none;
+  padding: 11px 22px;
+  border-radius: 22px;
+  background: #ffb347;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message-box button:hover {
+  background: #ff9f1c;
+}
