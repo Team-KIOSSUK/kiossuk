@@ -72,6 +72,14 @@ export default function Kiosk() {
           <button
             key={idx}
             className="menu-card"
+            onClick={() => {
+              if (menu.title === '기차 예매') {
+                navigate('/Train/train-practice');
+              } else {
+                // 간단한 피드백 제공 (다른 메뉴는 아직 연습 페이지가 없음)
+                alert(`${menu.title} 연습은 준비 중입니다.`);
+              }
+            }}
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,

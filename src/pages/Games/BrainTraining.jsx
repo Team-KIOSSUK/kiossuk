@@ -39,7 +39,6 @@ export default function BrainTraining() {
   }, []);
 
   const handleGameClick = (gameTitle) => {
-    // 1. 새로운 기록 생성
     const newRecord = {
       game: gameTitle,
       date: new Date().toLocaleString('ko-KR', {
@@ -51,14 +50,13 @@ export default function BrainTraining() {
       }),
     };
 
-    // 2. 기존 기록을 불러와 새로운 기록 추가
     const savedRecords = JSON.parse(localStorage.getItem('kiossukGameRecords')) || [];
     const updatedRecords = [newRecord, ...savedRecords];
-
-    // 3. 다시 localStorage에 저장
     localStorage.setItem('kiossukGameRecords', JSON.stringify(updatedRecords));
 
-    // (옵션) 실제 게임 페이지로 이동하는 로직을 여기에 추가할 수 있습니다.
+    if (gameTitle === '조건형 가위바위보') {
+      navigate('/conditional-rps');
+    }
   };
 
   return (
@@ -71,7 +69,7 @@ export default function BrainTraining() {
       <div className="bubble bubble5"></div>
 
       {/* 뒤로가기 */}
-      <button className="back-button" onClick={() => navigate(-1)}>
+      <button className="back-button" onClick={() => navigate('/home1')}>
         &lt;
       </button>
 
