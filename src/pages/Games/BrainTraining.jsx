@@ -58,7 +58,9 @@ export default function BrainTraining() {
     // 3. 다시 localStorage에 저장
     localStorage.setItem('kiossukGameRecords', JSON.stringify(updatedRecords));
 
-    // (옵션) 실제 게임 페이지로 이동하는 로직을 여기에 추가할 수 있습니다.
+    if (gameTitle === '공룡달리기') {
+  navigate('/dino');
+}
   };
 
   return (
