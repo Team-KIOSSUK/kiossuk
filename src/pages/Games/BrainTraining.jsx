@@ -54,9 +54,13 @@ export default function BrainTraining() {
     const updatedRecords = [newRecord, ...savedRecords];
     localStorage.setItem('kiossukGameRecords', JSON.stringify(updatedRecords));
 
-    if (gameTitle === '두더지잡기') {
+    if (gameTitle === '공룡달리기') {
+  navigate('/dino');
+}
+    else if (gameTitle === '두더지잡기') {
       navigate('/brain-training/mole');
-    } else if (gameTitle === '조건형 가위바위보') {
+    } 
+    else if (gameTitle === '조건형 가위바위보') {
       navigate('/conditional-rps');
     }
   };

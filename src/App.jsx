@@ -12,6 +12,7 @@ import TrainSeatSelection from './pages/Kiosk/Train/TrainSeatSelection.jsx';
 import TrainPayment from './pages/Kiosk/Train/TrainPayment.jsx';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
+import Dino from './pages/Games/Dino/Dino';
 import MoleGame from './pages/Games/Mole/MoleGame';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route path="/train-payment" element={<TrainPayment />} />
       <Route path="/conditional-rps" element={<ConditionalRps />} />
       <Route path="/records" element={<Records />} />
+      <Route path="/dino" element={<Dino />} />
       <Route path="/support" element={<Support />} />
     </Routes>
   );
