@@ -7,11 +7,9 @@ import BrainTraining from './pages/Games/BrainTraining';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
 
-import BankMain from './pages/Kiosk/Bank/BankMain';
-import Withdrawal from './pages/Kiosk/Bank/features/withdrawal';
-import Transfer from './pages/Kiosk/Bank/features/transfer';
-import Inquiry from './pages/Kiosk/Bank/features/inquiry';
-import Passbook from './pages/Kiosk/Bank/features/passbook';
+import BankMain from "./pages/Kiosk/Bank/BankMain";
+import Practice from "./pages/Kiosk/Bank/Practice";
+import TransactionSelect from './pages/Kiosk/Bank/TransactionSelect';
 
 
 import MarketGame from './pages/Games/Market/MarketGame';
@@ -28,18 +26,17 @@ function App() {
       <Route path="/records" element={<Records />} />
       <Route path="/support" element={<Support />} />
 
-      <Route path="/kiosk/bank" element={<BankMain />} />
-      <Route path="/kiosk/bank/withdrawal" element={<Withdrawal />} />
-      <Route path="/kiosk/bank/transfer" element={<Transfer />} />
-      <Route path="/kiosk/bank/inquiry" element={<Inquiry />} />
-      <Route path="/kiosk/bank/passbook" element={<Passbook />} />
-
-
 
 
       <Route path="/game/market" element={<MarketGame />} />
+  
+
+      <Route path="/kiosk/bank" element={<BankMain />} />
+      
+      <Route path="/kiosk/bank/practice" element={<Practice />} />
+      <Route path="/kiosk/bank/practice" element={<Practice />} />
+      <Route path="/kiosk/bank/select" element={<TransactionSelect />} />
     </Routes>
-    
   );
 }
 
