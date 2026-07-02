@@ -25,7 +25,7 @@ const menus = [
     icon: '🚆',
     title: '기차 예매',
     desc: '기차표를 예매해봐요',
-    path: '/kiosk/train', // TODO: 기차 예매 페이지 연결
+    path: '/kiosk/train',
   },
 ];
 
@@ -69,26 +69,19 @@ export default function Kiosk() {
       <div className={`menu-container ${isAnimated ? 'animated' : ''}`}>
         {menus.map((menu, idx) => (
           <button
-            key={idx}
+            key={menu.title}
             className="menu-card"
-            onClick={() => {
-  if (menu.title === '카페 주문') navigate('/kiosk/cafe');
-}}
-              if (menu.title === '기차 예매') {
-                navigate('/train-practice');
-              } else {
-                // 간단한 피드백 제공 (다른 메뉴는 아직 연습 페이지가 없음)
-                alert(`${menu.title} 연습은 준비 중입니다.`);
-              }
-            }}
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
             }}
             onClick={() => {
-              if (menu.path !== '#') navigate(menu.path);
+              if (menu.path && menu.path !== '#') {
+                navigate(menu.path);
+              } else {
+                alert(`${menu.title} 연습은 준비 중입니다.`);
+              }
             }}
-            onClick={() => menu.path && navigate(menu.path)}
           >
             <div className="menu-icon">{menu.icon}</div>
 
