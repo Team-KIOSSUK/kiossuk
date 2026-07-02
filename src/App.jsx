@@ -3,6 +3,7 @@ import Start1 from './pages/Home/Start1';
 import Start11 from './pages/Home/Start1_1';
 import Home1 from './pages/Home/home1';
 import Kiosk from './pages/Kiosk/kiosk_home';
+import Cafe from './pages/Kiosk/Cafe/Cafe';
 import RestaurantApp from './pages/Kiosk/Restaurant/src/app/App';
 import BrainTraining from './pages/Games/BrainTraining';
 import ConditionalRps from './pages/Games/RPS/ConditionalRps';
@@ -22,6 +23,7 @@ function App() {
       <Route path="/start1_1" element={<Start11 />} />
       <Route path="/home1" element={<Home1 />} />
       <Route path="/kiosk" element={<Kiosk />} />
+      <Route path="/kiosk/cafe" element={<Cafe />} />
       <Route path="/kiosk/restaurant/*" element={<RestaurantApp />} />
       <Route path="/kiosk/train/*" element={<TrainPractice />} />
       <Route path="/brain-training" element={<BrainTraining />} />

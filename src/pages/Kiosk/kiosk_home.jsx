@@ -7,7 +7,7 @@ const menus = [
     icon: '☕',
     title: '카페 주문',
     desc: '메뉴와 옵션을 골라요',
-    path: '/kiosk/cafe', // TODO: 카페 페이지 연결
+    path: '/kiosk/cafe',
   },
   {
     icon: '🍔',
@@ -19,7 +19,7 @@ const menus = [
     icon: '🏦',
     title: '은행 업무',
     desc: '입출금과 송금을 연습해요',
-    path: '#', // TODO: 은행 페이지 연결
+    path: '#',
   },
   {
     icon: '🚆',
@@ -34,24 +34,21 @@ export default function Kiosk() {
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
-    // 컴포넌트가 마운트된 후 짧은 지연을 주어 애니메이션을 시작합니다.
     const timer = setTimeout(() => {
       setIsAnimated(true);
-    }, 100); // 100ms 후에 애니메이션 시작
+    }, 100);
 
-    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 제거
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="kiosk-page">
-      {/* 배경 동그라미 */}
       <div className="bubble bubble1"></div>
       <div className="bubble bubble2"></div>
       <div className="bubble bubble3"></div>
       <div className="bubble bubble4"></div>
       <div className="bubble bubble5"></div>
 
-      {/* 뒤로가기 */}
       <button
         className="back-button"
         onClick={() => navigate('/home1')}
@@ -59,24 +56,24 @@ export default function Kiosk() {
         &lt;
       </button>
 
-      {/* 제목 */}
       <h1 className="page-title">키오스크</h1>
 
-      {/* 안내 박스 */}
       <div className="guide-box">
         <h2>천천히 연습해요</h2>
         <p>
-          실제 키오스크처럼 눌러보며 <br></br>주문과 결제 방법을 익혀요.
+          실제 키오스크처럼 눌러보며 <br />
+          주문과 결제 방법을 익혀요.
         </p>
       </div>
 
-      {/* 메뉴 버튼 */}
       <div className={`menu-container ${isAnimated ? 'animated' : ''}`}>
         {menus.map((menu, idx) => (
           <button
             key={idx}
             className="menu-card"
             onClick={() => {
+  if (menu.title === '카페 주문') navigate('/kiosk/cafe');
+}}
               if (menu.title === '기차 예매') {
                 navigate('/train-practice');
               } else {
@@ -87,6 +84,9 @@ export default function Kiosk() {
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
+            }}
+            onClick={() => {
+              if (menu.path !== '#') navigate(menu.path);
             }}
             onClick={() => menu.path && navigate(menu.path)}
           >
