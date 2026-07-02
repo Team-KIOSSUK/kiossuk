@@ -50,7 +50,7 @@ export default function Kiosk() {
       {/* 뒤로가기 */}
       <button
         className="back-button"
-        onClick={() => navigate(-1)}
+        onClick={() => navigate('/home1')}
       >
         &lt;
       </button>
