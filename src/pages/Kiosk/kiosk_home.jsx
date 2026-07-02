@@ -7,7 +7,7 @@ const menus = [
     icon: '☕',
     title: '카페 주문',
     desc: '메뉴와 옵션을 골라요',
-    path: null, // TODO: 카페 페이지 연결
+    path: '/kiosk/cafe', // TODO: 카페 페이지 연결
   },
   {
     icon: '🍔',
@@ -19,13 +19,13 @@ const menus = [
     icon: '🏦',
     title: '은행 업무',
     desc: '입출금과 송금을 연습해요',
-    path: null, // TODO: 은행 페이지 연결
+    path: '#', // TODO: 은행 페이지 연결
   },
   {
     icon: '🚆',
     title: '기차 예매',
     desc: '기차표를 예매해봐요',
-    path: null, // TODO: 기차 예매 페이지 연결
+    path: '/kiosk/train', // TODO: 기차 예매 페이지 연결
   },
 ];
 
