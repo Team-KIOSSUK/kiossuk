@@ -12,7 +12,7 @@ import TrainSeatSelection from './pages/Kiosk/Train/TrainSeatSelection.jsx';
 import TrainPayment from './pages/Kiosk/Train/TrainPayment.jsx';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
-import MoleGame from './pages/Games/MoleGame';
+import MoleGame from './pages/Games/Mole/MoleGame';
 
 function App() {
   return (

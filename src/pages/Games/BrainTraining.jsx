@@ -56,7 +56,7 @@ export default function BrainTraining() {
 
     if (gameTitle === '두더지잡기') {
       navigate('/brain-training/mole');
-    if (gameTitle === '조건형 가위바위보') {
+    } else if (gameTitle === '조건형 가위바위보') {
       navigate('/conditional-rps');
     }
   };
