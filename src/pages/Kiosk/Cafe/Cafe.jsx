@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Cafe.css';
 
-const img = (file) => `/images/cafe/${file}.jpg`;
+const img = (file) => `/images/cafe/${file}`;
 
 const cafeMenus = [
   { id: 1, category: 'coffee', name: '아메리카노', price: 3500, img: img('americano.jpg'), options: ['temp', 'size', 'ice', 'shot'] },
