@@ -13,7 +13,7 @@ const menus = [
     icon: '🍔',
     title: '음식점 주문',
     desc: '주문부터 결제까지 해봐요',
-    path: '#',
+    path: '/kiosk/restaurant',
   },
   {
     icon: '🏦',
@@ -25,7 +25,7 @@ const menus = [
     icon: '🚆',
     title: '기차 예매',
     desc: '기차표를 예매해봐요',
-    path: '#',
+    path: '/kiosk/train', // TODO: 기차 예매 페이지 연결
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Kiosk() {
 
       <button
         className="back-button"
-        onClick={() => navigate(-1)}
+        onClick={() => navigate('/home1')}
       >
         &lt;
       </button>
@@ -74,6 +74,13 @@ export default function Kiosk() {
             onClick={() => {
   if (menu.title === '카페 주문') navigate('/kiosk/cafe');
 }}
+              if (menu.title === '기차 예매') {
+                navigate('/train-practice');
+              } else {
+                // 간단한 피드백 제공 (다른 메뉴는 아직 연습 페이지가 없음)
+                alert(`${menu.title} 연습은 준비 중입니다.`);
+              }
+            }}
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
@@ -81,6 +88,7 @@ export default function Kiosk() {
             onClick={() => {
               if (menu.path !== '#') navigate(menu.path);
             }}
+            onClick={() => menu.path && navigate(menu.path)}
           >
             <div className="menu-icon">{menu.icon}</div>
 
