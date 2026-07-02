@@ -7,21 +7,25 @@ const menus = [
     icon: '☕',
     title: '카페 주문',
     desc: '메뉴와 옵션을 골라요',
+    path: null, // TODO: 카페 페이지 연결
   },
   {
     icon: '🍔',
     title: '음식점 주문',
     desc: '주문부터 결제까지 해봐요',
+    path: '/kiosk/restaurant',
   },
   {
     icon: '🏦',
     title: '은행 업무',
     desc: '입출금과 송금을 연습해요',
+    path: null, // TODO: 은행 페이지 연결
   },
   {
     icon: '🚆',
     title: '기차 예매',
     desc: '기차표를 예매해봐요',
+    path: null, // TODO: 기차 예매 페이지 연결
   },
 ];
 
@@ -72,10 +76,19 @@ export default function Kiosk() {
           <button
             key={idx}
             className="menu-card"
+            onClick={() => {
+              if (menu.title === '기차 예매') {
+                navigate('/Train/train-practice');
+              } else {
+                // 간단한 피드백 제공 (다른 메뉴는 아직 연습 페이지가 없음)
+                alert(`${menu.title} 연습은 준비 중입니다.`);
+              }
+            }}
             style={{
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
             }}
+            onClick={() => menu.path && navigate(menu.path)}
           >
             <div className="menu-icon">{menu.icon}</div>
 
