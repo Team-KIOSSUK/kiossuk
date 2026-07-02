@@ -54,6 +54,8 @@ export default function BrainTraining() {
     const updatedRecords = [newRecord, ...savedRecords];
     localStorage.setItem('kiossukGameRecords', JSON.stringify(updatedRecords));
 
+    if (gameTitle === '두더지잡기') {
+      navigate('/brain-training/mole');
     if (gameTitle === '조건형 가위바위보') {
       navigate('/conditional-rps');
     }

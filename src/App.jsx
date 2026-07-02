@@ -12,6 +12,7 @@ import TrainSeatSelection from './pages/Kiosk/Train/TrainSeatSelection.jsx';
 import TrainPayment from './pages/Kiosk/Train/TrainPayment.jsx';
 import Records from './pages/Profile/Records';
 import Support from './pages/Support/Support';
+import MoleGame from './pages/Games/MoleGame';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/kiosk" element={<Kiosk />} />
       <Route path="/kiosk/restaurant/*" element={<RestaurantApp />} />
       <Route path="/brain-training" element={<BrainTraining />} />
+      <Route path="/brain-training/mole" element={<MoleGame />} />
       <Route path="/train-practice" element={<TrainPractice />} />
       <Route path="/train-select" element={<TrainSelect />} />
       <Route path="/train-seat" element={<TrainSeatSelection />} />
