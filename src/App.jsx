@@ -16,6 +16,14 @@ import Support from './pages/Support/Support';
 import Dino from './pages/Games/Dino/Dino';
 import MoleGame from './pages/Games/Mole/MoleGame';
 
+import BankMain from "./pages/Kiosk/Bank/BankMain";
+import Practice from "./pages/Kiosk/Bank/Practice";
+import TransactionSelect from './pages/Kiosk/Bank/TransactionSelect';
+
+
+import MarketGame from './pages/Games/Market/MarketGame';
+
+
 function App() {
   return (
     <Routes>
@@ -36,6 +44,17 @@ function App() {
       <Route path="/records" element={<Records />} />
       <Route path="/dino" element={<Dino />} />
       <Route path="/support" element={<Support />} />
+
+
+
+      <Route path="/game/market" element={<MarketGame />} />
+  
+
+      <Route path="/kiosk/bank" element={<BankMain />} />
+      
+      <Route path="/kiosk/bank/practice" element={<Practice />} />
+      <Route path="/kiosk/bank/practice" element={<Practice />} />
+      <Route path="/kiosk/bank/select" element={<TransactionSelect />} />
     </Routes>
   );
 }

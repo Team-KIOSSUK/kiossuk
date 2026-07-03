@@ -19,7 +19,7 @@ const menus = [
     icon: '🏦',
     title: '은행 업무',
     desc: '입출금과 송금을 연습해요',
-    path: '#',
+    path: '/kiosk/bank',
   },
   {
     icon: '🚆',
@@ -75,14 +75,14 @@ export default function Kiosk() {
               top: `${235 + idx * 125}px`,
               transitionDelay: `${0.1 + idx * 0.1}s`,
             }}
+            // 은행을 클릭하면 위에서 적어둔 path 주소로 이동하기
             onClick={() => {
-              if (menu.path && menu.path !== '#') {
+              if (menu.path) {
                 navigate(menu.path);
-              } else {
-                alert(`${menu.title} 연습은 준비 중입니다.`);
               }
             }}
           >
+
             <div className="menu-icon">{menu.icon}</div>
 
             <div className="menu-text">
